@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -9,16 +10,299 @@
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="SEVA" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" xcode11CocoaTouchSystemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="labour" translatesAutoresizingMaskIntoConstraints="NO" id="OBx-oN-GOd">
+                                <rect key="frame" x="40" y="467" width="100" height="100"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="100" id="5b3-NZ-NWK"/>
+                                    <constraint firstAttribute="width" constant="100" id="UPC-1I-Vxd"/>
+                                </constraints>
+                            </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="donation" translatesAutoresizingMaskIntoConstraints="NO" id="3U9-Z1-fsU">
+                                <rect key="frame" x="235" y="467" width="100" height="100"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="100" id="Fqv-7u-Y82"/>
+                                    <constraint firstAttribute="width" constant="100" id="yMN-gl-dqr"/>
+                                </constraints>
+                            </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="food" translatesAutoresizingMaskIntoConstraints="NO" id="v01-2Z-ZQM">
+                                <rect key="frame" x="40" y="307" width="100" height="100"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="100" id="81K-zd-9C2"/>
+                                    <constraint firstAttribute="width" constant="100" id="ShD-Vv-X42"/>
+                                </constraints>
+                            </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="medicine" translatesAutoresizingMaskIntoConstraints="NO" id="eOo-d8-sJR">
+                                <rect key="frame" x="235" y="307" width="100" height="100"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="100" id="fCj-xZ-IZz"/>
+                                    <constraint firstAttribute="height" constant="100" id="yr7-Vo-hH2"/>
+                                </constraints>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CLD-XG-WDb">
+                                <rect key="frame" x="60" y="412" width="60" height="47"/>
+                                <fontDescription key="fontDescription" name="AvenirNext-Medium" family="Avenir Next" pointSize="25"/>
+                                <state key="normal" title="Food"/>
+                                <connections>
+                                    <segue destination="WDy-GH-7cz" kind="show" id="MIb-CE-Gqs"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pO3-SN-DBZ">
+                                <rect key="frame" x="49" y="572" width="82" height="47"/>
+                                <fontDescription key="fontDescription" name="AvenirNext-Medium" family="Avenir Next" pointSize="25"/>
+                                <state key="normal" title="Labour"/>
+                                <connections>
+                                    <segue destination="UXF-Rl-5NF" kind="show" id="3Wk-ET-pOC"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mXi-gf-ssw">
+                                <rect key="frame" x="231.5" y="572" width="107" height="47"/>
+                                <fontDescription key="fontDescription" name="AvenirNext-Medium" family="Avenir Next" pointSize="25"/>
+                                <state key="normal" title="Donation"/>
+                                <connections>
+                                    <segue destination="Pjy-Er-J9A" kind="show" id="6YJ-ci-i05"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="18g-pJ-BeU">
+                                <rect key="frame" x="231.5" y="412" width="107" height="47"/>
+                                <fontDescription key="fontDescription" name="AvenirNext-Medium" family="Avenir Next" pointSize="25"/>
+                                <state key="normal" title="Medicine"/>
+                                <connections>
+                                    <segue destination="snf-Q4-Rhx" kind="show" id="A7Y-5z-COh"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xpf-vO-pd7">
+                                <rect key="frame" x="122" y="617" width="131" height="45"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="27"/>
+                                <state key="normal" title="Contact Us"/>
+                                <connections>
+                                    <segue destination="adz-br-33o" kind="show" id="oi6-m9-tb3"/>
+                                </connections>
+                            </button>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logo" translatesAutoresizingMaskIntoConstraints="NO" id="Imd-gc-3av">
+                                <rect key="frame" x="-93.5" y="0.0" width="562" height="174"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="S- Service of" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fgJ-aB-Hvq">
+                                <rect key="frame" x="137.5" y="179" width="100" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="V- Victuals are" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SMt-5x-GSV">
+                                <rect key="frame" x="131.5" y="231" width="112" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="A- Available" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9ZJ-lL-C4k">
+                                <rect key="frame" x="142" y="257" width="91" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="E- Employees and" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iXg-ZN-e7K">
+                                <rect key="frame" x="118.5" y="205" width="138" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="OBx-oN-GOd" firstAttribute="top" secondItem="v01-2Z-ZQM" secondAttribute="bottom" constant="60" id="1wo-5e-Tk9"/>
+                            <constraint firstItem="Imd-gc-3av" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="4XK-WB-0N5"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="3U9-Z1-fsU" secondAttribute="trailing" constant="40" id="8YD-uc-AIJ"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="OBx-oN-GOd" secondAttribute="bottom" constant="100" id="94q-gs-Mu4"/>
+                            <constraint firstItem="Imd-gc-3av" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="96U-De-QlX"/>
+                            <constraint firstItem="18g-pJ-BeU" firstAttribute="centerX" secondItem="eOo-d8-sJR" secondAttribute="centerX" id="BYa-mp-igs"/>
+                            <constraint firstItem="9ZJ-lL-C4k" firstAttribute="top" secondItem="SMt-5x-GSV" secondAttribute="bottom" constant="5" id="DUx-Ka-3hA"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="3U9-Z1-fsU" secondAttribute="bottom" constant="100" id="Dku-6e-l6M"/>
+                            <constraint firstItem="OBx-oN-GOd" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="40" id="EvR-vd-XGi"/>
+                            <constraint firstItem="fgJ-aB-Hvq" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Far-fo-7se"/>
+                            <constraint firstItem="v01-2Z-ZQM" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="40" id="Fee-dh-Fq9"/>
+                            <constraint firstItem="iXg-ZN-e7K" firstAttribute="top" secondItem="fgJ-aB-Hvq" secondAttribute="bottom" constant="5" id="Fuv-PU-eAW"/>
+                            <constraint firstItem="pO3-SN-DBZ" firstAttribute="top" secondItem="OBx-oN-GOd" secondAttribute="bottom" constant="5" id="HYL-kl-eN5"/>
+                            <constraint firstItem="pO3-SN-DBZ" firstAttribute="centerX" secondItem="OBx-oN-GOd" secondAttribute="centerX" id="PQR-IK-FXr"/>
+                            <constraint firstItem="xpf-vO-pd7" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="S1G-Lv-IJa"/>
+                            <constraint firstItem="mXi-gf-ssw" firstAttribute="centerX" secondItem="3U9-Z1-fsU" secondAttribute="centerX" id="S5E-99-4Vo"/>
+                            <constraint firstItem="fgJ-aB-Hvq" firstAttribute="top" secondItem="Imd-gc-3av" secondAttribute="bottom" constant="5" id="bDQ-25-fMg"/>
+                            <constraint firstItem="18g-pJ-BeU" firstAttribute="top" secondItem="eOo-d8-sJR" secondAttribute="bottom" constant="5" id="bKq-8v-TAd"/>
+                            <constraint firstItem="SMt-5x-GSV" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="bMi-MV-CLj"/>
+                            <constraint firstItem="CLD-XG-WDb" firstAttribute="top" secondItem="v01-2Z-ZQM" secondAttribute="bottom" constant="5" id="fT9-GU-vR1"/>
+                            <constraint firstItem="9ZJ-lL-C4k" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="gmM-jO-UBl"/>
+                            <constraint firstItem="mXi-gf-ssw" firstAttribute="top" secondItem="3U9-Z1-fsU" secondAttribute="bottom" constant="5" id="nZV-pt-7XG"/>
+                            <constraint firstItem="3U9-Z1-fsU" firstAttribute="top" secondItem="eOo-d8-sJR" secondAttribute="bottom" constant="60" id="pmm-mD-IUr"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="eOo-d8-sJR" secondAttribute="trailing" constant="40" id="rUu-zp-FTt"/>
+                            <constraint firstItem="iXg-ZN-e7K" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="syN-X6-Gjk"/>
+                            <constraint firstItem="CLD-XG-WDb" firstAttribute="centerX" secondItem="v01-2Z-ZQM" secondAttribute="centerX" id="tQc-DB-zcY"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="xpf-vO-pd7" secondAttribute="bottom" constant="5" id="wvf-ue-M8M"/>
+                            <constraint firstItem="SMt-5x-GSV" firstAttribute="top" secondItem="iXg-ZN-e7K" secondAttribute="bottom" constant="5" id="xsV-ZK-x48"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="138.40000000000001" y="109.29535232383809"/>
+        </scene>
+        <!--MedicineVC-->
+        <scene sceneID="nTY-nL-GbB">
+            <objects>
+                <viewController storyboardIdentifier="MedicineVC" id="snf-Q4-Rhx" customClass="MedicineVC" customModule="SEVA" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Iv5-1O-fLy">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="647"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <viewLayoutGuide key="safeArea" id="bUm-7m-sWU"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="m9j-An-Y1a"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="hpr-ri-rVz" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="857" y="-613"/>
+        </scene>
+        <!--FoodVC-->
+        <scene sceneID="bey-gW-pAf">
+            <objects>
+                <viewController storyboardIdentifier="FoodVC" id="WDy-GH-7cz" customClass="FoodVC" customModule="SEVA" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="oJ0-UG-T3v">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="647"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <viewLayoutGuide key="safeArea" id="Equ-Yk-8dm"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="VPh-fy-fMC"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="e57-oy-mU7" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="857" y="109"/>
+        </scene>
+        <!--Contact UsVC-->
+        <scene sceneID="MLv-IE-VUb">
+            <objects>
+                <viewController id="adz-br-33o" customClass="ContactUsVC" customModule="SEVA" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="5AY-Pa-hEk">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="647"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="EMAIL:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qSX-3N-0bS">
+                                <rect key="frame" x="20" y="50" width="99" height="41"/>
+                                <fontDescription key="fontDescription" name="AvenirNext-Medium" family="Avenir Next" pointSize="30"/>
+                                <color key="textColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="PHONE NO:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Dmh-hs-jc2">
+                                <rect key="frame" x="20" y="285" width="172" height="41"/>
+                                <fontDescription key="fontDescription" name="AvenirNext-Medium" family="Avenir Next" pointSize="30"/>
+                                <color key="textColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5ew-mg-I1m">
+                                <rect key="frame" x="20" y="116" width="262" height="37"/>
+                                <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="18"/>
+                                <state key="normal" title="himanshujoshi2088@gmail.com">
+                                    <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
+                                </state>
+                                <connections>
+                                    <action selector="himanshuEmail:" destination="adz-br-33o" eventType="touchUpInside" id="zCy-jg-oLD"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rov-ui-EeE">
+                                <rect key="frame" x="20" y="178" width="255" height="37"/>
+                                <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="18"/>
+                                <state key="normal" title="shubhamkhatri234@gmail.com">
+                                    <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
+                                </state>
+                                <connections>
+                                    <action selector="khatriEmail:" destination="adz-br-33o" eventType="touchUpInside" id="JBS-2Z-XdS"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qq2-0D-hTV">
+                                <rect key="frame" x="20" y="351" width="105" height="37"/>
+                                <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="18"/>
+                                <state key="normal" title="9871097664">
+                                    <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
+                                </state>
+                                <connections>
+                                    <action selector="himanshuPhone:" destination="adz-br-33o" eventType="touchUpInside" id="O0k-uv-FWu"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3HX-a4-dFQ">
+                                <rect key="frame" x="20" y="413" width="105" height="37"/>
+                                <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="18"/>
+                                <state key="normal" title="9616488892">
+                                    <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
+                                </state>
+                                <connections>
+                                    <action selector="khatriPhone:" destination="adz-br-33o" eventType="touchUpInside" id="O5x-fT-j1I"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="3HX-a4-dFQ" firstAttribute="top" secondItem="qq2-0D-hTV" secondAttribute="bottom" constant="25" id="1ND-cu-JjD"/>
+                            <constraint firstItem="qq2-0D-hTV" firstAttribute="top" secondItem="Dmh-hs-jc2" secondAttribute="bottom" constant="25" id="51v-je-Wuk"/>
+                            <constraint firstItem="5ew-mg-I1m" firstAttribute="top" secondItem="qSX-3N-0bS" secondAttribute="bottom" constant="25" id="9Fb-F8-mU2"/>
+                            <constraint firstItem="3HX-a4-dFQ" firstAttribute="leading" secondItem="ito-el-2iu" secondAttribute="leading" constant="20" id="BT0-nf-sKH"/>
+                            <constraint firstItem="Dmh-hs-jc2" firstAttribute="top" secondItem="rov-ui-EeE" secondAttribute="bottom" constant="70" id="TQf-cD-yNG"/>
+                            <constraint firstItem="qq2-0D-hTV" firstAttribute="leading" secondItem="ito-el-2iu" secondAttribute="leading" constant="20" id="cDy-2C-B49"/>
+                            <constraint firstItem="qSX-3N-0bS" firstAttribute="top" secondItem="ito-el-2iu" secondAttribute="top" constant="50" id="cWz-DV-xdN"/>
+                            <constraint firstItem="Dmh-hs-jc2" firstAttribute="leading" secondItem="ito-el-2iu" secondAttribute="leading" constant="20" id="gSS-Ao-yIq"/>
+                            <constraint firstItem="5ew-mg-I1m" firstAttribute="leading" secondItem="ito-el-2iu" secondAttribute="leading" constant="20" id="hWC-sV-Ysl"/>
+                            <constraint firstItem="rov-ui-EeE" firstAttribute="leading" secondItem="ito-el-2iu" secondAttribute="leading" constant="20" id="ibi-Lk-4bF"/>
+                            <constraint firstItem="rov-ui-EeE" firstAttribute="top" secondItem="5ew-mg-I1m" secondAttribute="bottom" constant="25" id="msh-le-nHf"/>
+                            <constraint firstItem="qSX-3N-0bS" firstAttribute="leading" secondItem="ito-el-2iu" secondAttribute="leading" constant="20" id="pPl-wv-i9N"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="ito-el-2iu"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="TsE-Ta-2bv"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="lBz-XA-Pyl" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="7" y="804"/>
+        </scene>
+        <!--LabourVC-->
+        <scene sceneID="SD5-gT-zZs">
+            <objects>
+                <viewController storyboardIdentifier="LabourVC" id="UXF-Rl-5NF" customClass="LabourVC" customModule="SEVA" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="784-qJ-4SB">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="647"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <viewLayoutGuide key="safeArea" id="Ue8-Eu-mbh"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="bhF-RB-urI"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="4eU-s8-2KD" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="857" y="804"/>
+        </scene>
+        <!--DonationVC-->
+        <scene sceneID="ESi-vS-Xd3">
+            <objects>
+                <viewController storyboardIdentifier="DonationVC" id="Pjy-Er-J9A" customClass="DonationVC" customModule="SEVA" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="sSj-Dc-ZDV">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="647"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <viewLayoutGuide key="safeArea" id="e1T-XX-VuK"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="Ar0-k4-flw"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="0KY-A0-66N" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1626" y="108"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="donation" width="512" height="512"/>
+        <image name="food" width="512" height="512"/>
+        <image name="labour" width="512" height="512"/>
+        <image name="logo" width="281" height="87"/>
+        <image name="medicine" width="512" height="512"/>
+    </resources>
 </document>
